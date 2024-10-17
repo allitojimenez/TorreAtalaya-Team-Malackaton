@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main-component {
+    background-color: black; /* Fondo negro */
+    min-height: 100vh; /* Asegura que cubra toda la ventana */
+    width: 100%; /* Cubre todo el ancho */
+    display: flex; /* Para alinear el contenido */
+    flex-direction: column; /* Coloca los elementos de forma vertical */
+    justify-content: flex-start; /* Alinea el contenido arriba */
+    align-items: center; /* Centra horizontalmente */
+    position: relative; /* Posicionamiento relativo para la imagen */
+}
+
+.main-component::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Ajusta este valor según el tamaño deseado para la imagen */
+    background-image: url('./Images/transly-translation-agency-fG7fzu-6lWA-unsplash.webp'); /* Ruta de la imagen */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Cambia este valor para ajustar la opacidad */
+    z-index: 1; /* Mantiene la imagen por detrás del contenido */
+}
+
+.main-content {
+    position: relative;
+    z-index: 2; /* Asegura que el contenido esté encima de la imagen */
+    color: white; /* Color del texto sobre el fondo negro */
+    padding-top: 50px; /* Espacio entre la imagen y el contenido */
+}
